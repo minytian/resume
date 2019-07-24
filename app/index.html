@@ -5,13 +5,13 @@
 
 	<meta charset="utf-8">
 
-	<title>OptimizedHTML 5</title>
-	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<title>resume by Maxim Koryakov</title>
+	<meta name="description" content="resume by Maxim Koryakov">
 
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="icon" href="img/favicon.png">
-	<meta property="og:image" content="img/@1x/preview.jpg">
+<!-- 	<link rel="icon" href="img/favicon.png">
+	<meta property="og:image" content="img/@1x/preview.jpg"> -->
 	
 	<link rel="stylesheet" href="css/styles.min.css">
 
@@ -19,27 +19,56 @@
 
 <body>
 
-	<!-- Custom HTML / Remove before use -->
+	<header>
+		<div class="container">
+			<div class="header-background" style="background-image: url(img/_src/top-bg.jpg);">
 
-	<div class="container">
+				<div class="aboutMe">
 
-		<div class="parent"> <!-- Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/ -->
-			<img class="lazy img-responsive example-img"
-			src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-			data-src="img/@1x/preview.jpg"
-			data-srcset="img/@1x/preview.jpg 1x, img/@2x/preview.jpg 2x"
-			alt="Start HTML5 Template">
+					<div class="aboutMe__left">
+						<p class="aboutMe__signature">Resume</p>
+						<div class="aboutMe__photoFrame">
+							<img src="img/@1x/im.jpg" alt="Фото работника" class="aboutMe__avatar">
+							<h1 class="aboutMe__fullname">Максим Коряков</h1>
+							<p class="aboutMe__frontend">Frontend-разработчик</p>
+						</div>
+					</div>
+
+					<div class="aboutMe__right">
+						<h2 class="aboutMe__descr">Заголовок второго уровня</h2>
+						<p class="aboutMe__text">пару слов обо мне Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Однажды большой продолжил ее деревни знаках запятой все снова. Наш лучше если домах своего, снова решила она предупреждал даже безопасную маленькая о приставка семь вопрос курсивных от всех буквоград большого, дороге за взгляд, всеми агенство! Даль предупреждал взобравшись агенство безопасную скатился.</p>
+
+						<!-- aboutMe__info может быть не надо -->
+						<div class="aboutMe__info">
+							<ul class="aboutMe__list">
+								<li class="aboutMe__item">Дата рождения:</li><p>27 августа 1992 года</p>
+								<li class="aboutMe__item">Адрес:</li><p>Киров, Ленинский р-он, ЖК "Знак"</p>
+								<li class="aboutMe__item">Телефон:</li><p>+7(953)-943-64-05</p>
+								<li class="aboutMe__item">E-mail:</li><p>maxim.koryakov@mail.ru</p>
+								<li class="aboutMe__item">бла бла:</li>
+							</ul>
+						</div>
+
+					</div><!-- обо мне справа -->
+
+				</div> <!-- Обо мне -->
+
+			</div>
 		</div>
-		<br>
-		<h2>Welcome to startup HTML template OptimizedHTML 5!</h2>
-		<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. <em>Ad distinctio animi</em>, dolorum eaque praesentium unde aliquid, mollitia itaque voluptate quos modi et incidunt tempora fugiat voluptatum quia esse dolor repellat.</p>
-		<br>
-		<div class="example-grid">
-			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quo vero molestias, esse doloribus corrupti, nemo minus ullam tempore tenetur magni aut quos soluta sit adipisci eius expedita amet non.</div>
-			<div>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</div>
-		</div>
 
-	</div>
+
+	</header>
+
+	
+	<!-- а тут в оставшемся месте, что оставил 80vh сделаем в строчку форму отправки письма на эл. адрес. -->
+		<div class="feedback">
+			<form class="feedback__form">
+				<input class="feedback__enterName" type="text" placeholder="Введите имя / Организацию">
+				<input class="feedback__enterEmail" type="email" placeholder="Ваш E-mail">
+				<input class="feedback__enterText" type="text" placeholder="Ваши пожелания / Пару слов для меня">
+				<input class="feedback__button" type="button" value="Отправить">
+			</form>
+		</div>
 
 	<script src="js/scripts.min.js"></script>
 

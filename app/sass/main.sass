@@ -2,19 +2,10 @@
 @import fonts
 @import libs
 
-::placeholder
-	color: #666
-
-::selection
-	background-color: $accent
-	color: #fff
 
 input, textarea
 	outline: none
-	&:focus:required:invalid
-		border-color: red
-	&:required:valid
-		border-color: green
+
 
 body
 	font-size: 16px
@@ -23,18 +14,15 @@ body
 	line-height: 1.65
 	font-family: 'Roboto', sans-serif
 	overflow-x: hidden
-	color: $text
+	color: #fff
 
 // Custom Sass / Remove before use
 
 .container
-	max-width: 700px
-	padding:
-		right: $gutter/2
-		left: $gutter/2
-	margin:
-		left: auto
-		right: auto
+	display: flex
+	width: 100%
+	height: auto
+	position: relative
 
 .img-responsive
 	display: block
@@ -55,8 +43,117 @@ body
 		> div
 			padding: $gutter/2 0
 	
-.example-img
+.header-background
 	width: 100%
+	height: 85vh
+	position: relative 
+	display: block 
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	z-index: 1
+	&::before
+		content: ""
+		display: block
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		background-color: #133139		// можно сделать от верха к низу градиент
+		opacity: .45
+		z-index: 2
 
-.parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
-	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+		// Поменять ширину фотографии(и __signature) при уменьшении экрана.
+		//Сделал на 1600px
+.aboutMe
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	width: 100%
+	height: 100%
+	padding:
+		left: 5%
+		right: 5%
+		top: 115px
+	position: absolute
+	z-index: 3
+
+		// обо мне слева
+	&__left
+		display: flex
+		flex-direction: column
+		width: 35%
+		height: inherit
+		margin-right: 150px
+	&__photoFrame
+		width: 385px  //!!! поправить рамку
+		height: auto
+		border: 1px solid #CFCFCF
+		text-align: center
+		z-index: 3
+	&__signature
+		margin-bottom: 0
+		margin-left: 30px			//!!!!
+		text-align: center
+		display: flex
+		color: #fff
+	&__avatar
+		padding-top: 20px
+		// width: 100%
+		height: auto
+		display: block
+		margin: 0 auto
+	&__fullname
+	&__frontend
+		&::before, &::after
+			content: "-"				// Заменить, возможно на fontAwesome
+			margin-right: 5px
+		&::after
+			margin-left: 5px
+
+
+		// обо мне справа
+	&__right
+		width: 60%
+		min-width: 40%
+		height: auto
+		margin-top: 30px
+	&__text
+		padding-bottom: 20px
+		border-bottom: 1px solid #fff	// изменить, например, тень или вообще переопределить в хтмл отвельно и сделать длиннее
+	&__list
+		margin-top: 75px
+		list-style: none
+		padding-left: 0
+		width: 500px
+		p
+			margin: 0
+			display: inline-block
+			margin-left: 100px
+	&__item
+		width: 140px
+		display: inline-block
+
+.feedback
+	width: 100%
+	height: auto
+	margin-top: 20px
+	padding:
+		left: 5%
+		right: 5%
+	&__form
+		width: 100%
+		display: flex
+		justify-content: space-between
+	&__enterName
+		width: 25%
+		height: 40px
+	&__enterEmail
+		width: 25%
+		height: 40px
+	&__enterText
+		width: 25%
+		height: 40px
+	&__button
+		width: 15%
