@@ -6,6 +6,11 @@
 input, textarea
 	outline: none
 
+h2
+	font-size: 33px
+h3
+	font-size: 26px
+
 
 body
 	font-size: 16px
@@ -14,9 +19,13 @@ body
 	line-height: 1.65
 	font-family: 'Roboto', sans-serif
 	overflow-x: hidden
+	background-color: #343639
 	color: #fff
 
 // Custom Sass / Remove before use
+.source
+	display: flex
+	justify-content: center
 
 .container
 	display: flex
@@ -105,6 +114,7 @@ body
 		display: block
 		margin: 0 auto
 	&__fullname
+		font-size: 26px
 	&__frontend
 		&::before, &::after
 			content: "-"				// Заменить, возможно на fontAwesome
@@ -134,6 +144,52 @@ body
 	&__item
 		width: 140px
 		display: inline-block
+
+// Мои работы
+.projects
+	width: 100%
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding:
+		left: 5%
+		right: 5%
+		top: 30px
+		bottom: 30px
+	&__descr
+		text-align: center
+		letter-spacing: 1.3px
+		padding-bottom: 30px
+
+	.works
+		width: 80%
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		&__item
+			width: 300px
+			height: 240px
+			padding-left: 20px
+			margin-bottom: 30px
+			box-sizing: border-box
+			overflow: hidden
+			&:first-child
+				padding: 0
+		&__descr
+			text-align: center
+		&__img
+			width: 100%
+			transition: .4s ease
+			box-sizing: border-box
+			overflow: hidden
+			&:hover
+				cursor: pointer
+				transform: scale(1.05) translateY(7px) // сделать первую картинку(biruang) норомальной при увеличении
+			
+			
+
+
+		
 
 .feedback
 	width: 100%
