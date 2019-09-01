@@ -85,6 +85,21 @@ body
 		top: 115px
 	position: absolute
 	z-index: 3
+	&__icons
+		width: 100%
+		height: 50px
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		.icon__github
+			width: 30px
+			margin-right: 10px
+		.icon__repl
+			width: 30px
+			margin-right: 10px
+		.icon__vk
+			width: 30px
 
 		// обо мне слева
 	&__left
@@ -162,17 +177,18 @@ body
 	.works
 		width: 80%
 		display: flex
+		flex-direction: flex-start
 		justify-content: space-between
 		flex-wrap: wrap
 		&__item
 			// flex-basis: 30%
-			width: 30%
-			margin-left: 20px
+			width: 31%
+			// margin-left: 20px
 			margin-bottom: 50px
 			box-sizing: border-box
 			position: relative
-			&:first-child
-				margin: 0
+			// &:nth-child(1n)
+			// 	margin: 0
 		&__descr
 			text-align: center
 		&__img
@@ -220,6 +236,9 @@ body
 					width: 80px
 					height: 30px
 					color: #fff
+		&__text
+			width: 100%
+			margin-top: 10px
 		&__modal
 			display: block 
 			width: 80px
@@ -258,47 +277,62 @@ body
 	margin-left: -10%
 	margin-top: 30px
 
-		
-		
-
-
-
-
-
-
-
-
-
-
-
-			
-
-				
-
-		
-
-
-		
-
-.feedback
-	width: 100%
-	height: auto
-	margin-top: 20px
-	padding:
-		left: 5%
-		right: 5%
-	&__form
-		width: 100%
+footer 
+	background-color: #000
+	.feedback
 		display: flex
-		justify-content: space-between
-	&__enterName
-		width: 25%
-		height: 40px
-	&__enterEmail
-		width: 25%
-		height: 40px
-	&__enterText
-		width: 25%
-		height: 40px
-	&__button
-		width: 15%
+		width: 100%
+		// height: 300px
+		padding-top: 20px
+		padding-bottom: 150px
+		padding:
+			left: 5%
+			right: 5%
+		&__left
+			width: 50%
+		&__form
+			width: 50%
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+		&__enterName
+			width: 47%
+			height: 40px
+			padding-left: 20px
+			margin-bottom: 10px
+			border-radius: 4px
+			border: none
+			transition: .3s
+		&__enterEmail
+			width: 47%
+			height: 40px
+			padding-left: 20px
+			margin-bottom: 10px
+			border-radius: 4px
+			border: none
+			transition: .3s
+		&__enterText
+			width: 100%
+			height: 150px
+			padding-left: 20px
+			padding-top: 5px
+			margin-bottom: 10px
+			resize: none
+			border-radius: 4px
+			border: none
+			transition: .3s
+		&__button
+			width: 150px
+			height: 40px
+			float: right
+			border: none
+			border-radius: 4px
+			font-size: 18px
+			letter-spacing: 1px
+			transition: 0.4s
+			// background-color: #fff    /// изменить 
+			&:hover
+				background-color: darkgray // изменить 
+			&-block
+				width: 100%
+
