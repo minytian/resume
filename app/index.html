@@ -17,24 +17,24 @@
 
 </head>
 
-<body>
+<body style="background-image: url(img/@2x/fon__big.jpg);">
 
 	<header>
 		<div class="container">
-			<div class="header-background" style="background-image: url(img/_src/top-bg.jpg);">
+			<div class="header-background">
 
 				<div class="aboutMe">
 
 					<div class="aboutMe__left">
-						<p class="aboutMe__signature">Resume</p>
+						<p class="aboutMe__signature">Резюме</p>
 						<div class="aboutMe__photoFrame">
 							<img src="img/@1x/im.jpg" alt="Фото работника" class="aboutMe__avatar">
 							<h3 class="aboutMe__fullname">Максим Коряков</h3>
 							<p class="aboutMe__frontend">Frontend-разработчик</p>
 							<div class="aboutMe__icons">
-								<a href="https://github.com/minytian" title="github"><img src="img/_src/github__logo.svg" alt="github" class="icon__github"></a>
-								<a href="https://repl.it/@minytian" title="repl.it"><img src="img/_src/replit__logo.svg" alt="repl.it" class="icon__repl"></a>
-								<a href="https://vk.com/id9360638" title="vk"><img src="img/_src/vk__logo.svg" alt="vk" class="icon__vk"></a>
+								<a href="https://repl.it/@minytian" title="repl.it" target="_blank"><img src="img/_src/replit__logo.svg" alt="repl.it" class="icon__repl"></a>
+								<a href="https://github.com/minytian" title="github" target="_blank"><img src="img/_src/github__logo.svg" alt="github" class="icon__github"></a>
+								<a href="https://vk.com/id9360638" title="vk" target="_blank"><img src="img/_src/vk__logo.svg" alt="vk" class="icon__vk"></a>
 							</div>
 						</div>
 					</div>
@@ -47,7 +47,7 @@
 						<div class="aboutMe__info">
 							<ul class="aboutMe__list">
 								<li class="aboutMe__item">Дата рождения:</li><p>27 августа 1992 года</p>
-								<li class="aboutMe__item">Адрес:</li><p>Киров, Ленинский р-он, ЖК "Знак"</p>
+								<li class="aboutMe__item">Адрес:</li><p>Киров, Ленинский р-н, ЖК "Знак"</p>
 								<li class="aboutMe__item">Телефон:</li><p>+7(953)-943-64-05</p>
 								<li class="aboutMe__item">E-mail:</li><p>maxim.koryakov@mail.ru</p>
 								<li class="aboutMe__item">что нибудь ещё:</li>
@@ -136,19 +136,21 @@
 
 
 <footer>
-	<!-- а тут в оставшемся месте, что оставил 80vh сделаем в строчку форму отправки письма на эл. адрес. -->
-	<div class="feedback">
-		<div class="feedback__left">
-			
-		</div>
-		<form class="feedback__form">
-			<input class="feedback__enterName" type="text" placeholder="Ваше имя">
-			<input class="feedback__enterEmail" type="email" placeholder="Ваш E-mail" required="Обязательное поле для заполнения">
-			<textarea class="feedback__enterText" placeholder="Ваши пожелания"></textarea>
-			<div class="feedback__button-block">
-				<input class="feedback__button" type="button" value="Отправить">
+	<div class="container">
+		<!-- а тут в оставшемся месте, что оставил 80vh сделаем в строчку форму отправки письма на эл. адрес. -->
+		<div class="feedback">
+			<div class="feedback__left">
+				
 			</div>
-		</form>
+			<form class="feedback__form">
+				<input class="feedback__enterName" name="name" type="text" placeholder="Ваше имя">
+				<input class="feedback__enterEmail" name="email" type="email" placeholder="Ваш E-mail" required="Обязательное поле для заполнения">
+				<textarea class="feedback__enterText" name="text" placeholder="Ваши пожелания"></textarea>
+				<div class="feedback__button-block">
+					<input class="feedback__button" type="button" value="Отправить">
+				</div>
+			</form>
+		</div>
 	</div>
 </footer>
 
