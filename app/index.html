@@ -31,6 +31,11 @@
 							<img src="img/@1x/im.jpg" alt="Фото работника" class="aboutMe__avatar">
 							<h3 class="aboutMe__fullname">Максим Коряков</h3>
 							<p class="aboutMe__frontend">Frontend-разработчик</p>
+							<div class="aboutMe__icons">
+								<a href="https://github.com/minytian" title="github"><img src="img/_src/github__logo.svg" alt="github" class="icon__github"></a>
+								<a href="https://repl.it/@minytian" title="repl.it"><img src="img/_src/replit__logo.svg" alt="repl.it" class="icon__repl"></a>
+								<a href="https://vk.com/id9360638" title="vk"><img src="img/_src/vk__logo.svg" alt="vk" class="icon__vk"></a>
+							</div>
 						</div>
 					</div>
 
@@ -65,34 +70,62 @@
 			<h2 class="projects__descr">Мои маленькие проекты</h2>
 			<div class="works">
 				<div class="works__item">
-					<h3 class="works__descr">Макет biruang</h3>
+					<h3 class="works__descr">biruang</h3>
 					<div class="works__img">
 						<img  src="img/@2x/Biruang__mini.jpg" alt="Biruang">
 						<div class="works__link">
-							<p class="works__modal">Макет</p>
-							<p><a href="#">Вёрстка</a></p>
+							<p class="works__modal" title="Картинка макета">Макет</p>
+							<p><a href="https://minytian.github.io/3_biruang/" title="Ссылка на github.io" target="_blank">Вёрстка</a></p>
 						</div>
 					</div>
+						<p class="works__text">Один из самых первых проектов, написанный по курсу <a href="https://webformyself.com/">WebForMySelf</a> с "HTML5 и CSS3 с нуля до профи"</p>
 				</div>
 				<div class="works__item">
-					<h3 class="works__descr">Первый макет</h3>
+					<h3 class="works__descr">pricing</h3>
 					<div class="works__img">
-						<img  src="img/@2x/Biruang__mini.jpg" alt="Biruang">
+						<img  src="img/@2x/Pricing__mini.jpg" alt="pricing">
 						<div class="works__link">
-							<p><a href="biruang.html">Макет</a></p>
-							<p><a href="#">Вёрстка</a></p>
+							<p class="works__modal" title="Картинка макета">Макет</p>
+							<p><a href="https://minytian.github.io/14_pricing/" title="Ссылка на github.io" target="_blank">Вёрстка</a></p>
 						</div>
 					</div>
+					<p class="works__text">Макет, написанный на одном из курсов Glo Academy — HTML, CSS и JS</p>
 				</div>
 				<div class="works__item">
-					<h3 class="works__descr">Первый макет</h3>
+					<h3 class="works__descr">design</h3>
 					<div class="works__img">
-						<img  src="img/@2x/Biruang__mini.jpg" alt="Biruang">
-						<div class="works__link">
-							<p><a href="biruang.html">Макет</a></p>
-							<p><a href="#">Вёрстка</a></p>
+						<img  src="img/@2x/design__mini.jpg" alt="design">
+						<div class="works__link" >
+							<p class="works__modal" title="Картинка макета">Макет</p>
+							<p><a href="https://minytian.github.io/16_design/" title="Ссылка на github.io" target="_blank">Вёрстка</a></p>
 						</div>
 					</div>
+					<p class="works__text">Практика CSS Grid на курсе WebDesign Master</p>
+				</div>
+				<div class="works__item">
+					<h3 class="works__descr">atlantida</h3>
+					<div class="works__img">
+						<img  src="img/@2x/atlantida__mini.jpg" alt="atlantida">
+						<div class="works__link" >
+							<p class="works__modal" title="Картинка макета">Макет</p>
+							<p><a href="https://minytian.github.io/29_practica_atlantida_sidebar/" title="Ссылка на github.io" target="_blank">Вёрстка</a></p>
+						</div>
+					</div>
+					<p class="works__text">Самостоятельная практика</p>
+				</div>
+				<div class="works__item">
+					<h3 class="works__descr">S&Mitler</h3>
+					<div class="works__img">
+						<img  src="img/@2x/smitler__mini.jpg" alt="S&Mitler">
+						<div class="works__link">
+							<p class="works__modal" title="Картинка макета">Макет</p>
+							<p><a href="https://minytian.github.io/smilters.remove/" title="Ссылка на github.io" target="_blank">Вёрстка</a></p>
+						</div>
+					</div>
+					<p class="works__text">Курс от WebDesign Master <a href="https://youtu.be/v3N3gEaa7uk">плейлист на youtube.ru</a></p>
+				</div>
+				<div class="works__item">
+					<!-- Пока что пусто -->
 				</div>
 			</div>
 
@@ -102,23 +135,61 @@
 
 
 
+<footer>
 	<!-- а тут в оставшемся месте, что оставил 80vh сделаем в строчку форму отправки письма на эл. адрес. -->
-		<div class="feedback">
-			<form class="feedback__form">
-				<input class="feedback__enterName" type="text" placeholder="Введите имя / Организацию">
-				<input class="feedback__enterEmail" type="email" placeholder="Ваш E-mail">
-				<input class="feedback__enterText" type="text" placeholder="Ваши пожелания / Пару слов для меня">
-				<input class="feedback__button" type="button" value="Отправить">
-			</form>
+	<div class="feedback">
+		<div class="feedback__left">
+			
 		</div>
-<section>
-<div class="myModal">
-	<p class="close">&times;</p>
-	<div class="modal">
-		<img src="img/@2x/Biruang__big.jpg" alt="Biruang__big">
+		<form class="feedback__form">
+			<input class="feedback__enterName" type="text" placeholder="Ваше имя">
+			<input class="feedback__enterEmail" type="email" placeholder="Ваш E-mail" required="Обязательное поле для заполнения">
+			<textarea class="feedback__enterText" placeholder="Ваши пожелания"></textarea>
+			<div class="feedback__button-block">
+				<input class="feedback__button" type="button" value="Отправить">
+			</div>
+		</form>
 	</div>
-</div>
+</footer>
+
+<!-- Модальное окно -->
+<section>
+	<div class="myModal" id="modal__biruang">
+		<p class="close">&times;</p>
+		<div class="modal" >
+			<img src="img/@2x/Biruang__big.jpg" alt="Biruang__big">
+		</div>
+	</div>
+
+	<div class="myModal" id="modal__pricing">
+		<p class="close">&times;</p>
+		<div class="modal" >
+			<img src="img/@2x/Pricing__big.jpg" alt="Pricing__big">
+		</div>
+	</div>
+
+	<div class="myModal" id="modal__design">
+		<p class="close">&times;</p>
+		<div class="modal" >
+			<img src="img/@2x/design__big.png" alt="design__big">
+		</div>
+	</div>
+
+	<div class="myModal" id="modal__atlantida">
+		<p class="close">&times;</p>
+		<div class="modal" >
+			<img src="img/@2x/atlantida__big.jpg" alt="atlantida__big">
+		</div>
+	</div>
+
+	<div class="myModal" id="modal__smitler">
+		<p class="close">&times;</p>
+		<div class="modal" >
+			<img src="img/@2x/smitler__big.jpg" alt="smitler__big">
+		</div>
+	</div>
 </section>
+
 	<script src="js/scripts.min.js"></script>
 
 </body>
