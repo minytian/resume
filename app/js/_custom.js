@@ -1,5 +1,6 @@
 
 // модальные окна
+// const open = document.querySelectorAll('.works__modal')
 const open__biruang = document.querySelectorAll('.works__modal')[0]
 const open__pricing = document.querySelectorAll('.works__modal')[1]
 const open__design = document.querySelectorAll('.works__modal')[2]
@@ -10,11 +11,20 @@ const modal__pricing = document.querySelector('#modal__pricing')
 const modal__design = document.querySelector('#modal__design')
 const modal__atlantida = document.querySelector('#modal__atlantida')
 const modal__smitler = document.querySelector('#modal__smitler')
-const close__biruang = document.querySelectorAll('.close')[0]
-const close__pricing = document.querySelectorAll('.close')[1]
-const close__design = document.querySelectorAll('.close')[2]
-const close__atlantida = document.querySelectorAll('.close')[3]
-const close__smitler = document.querySelectorAll('.close')[4]
+const close = document.querySelectorAll('.close')
+
+for (let i = 0; i < close.length; i++) {
+	const ars = close[i]
+
+	ars.onclick = function () {
+		modal__biruang.style.display = 'none'
+		modal__pricing.style.display = 'none'
+		modal__design.style.display = 'none'
+		modal__atlantida.style.display = 'none'
+		modal__smitler.style.display = 'none'
+	}
+}
+
 
 open__biruang.onclick = function () {
 		modal__biruang.style.display = 'block'
@@ -48,27 +58,6 @@ window.onclick = function (event) {
 	}
 }
 
-close__biruang.onclick = function () {
-	modal__biruang.style.display = 'none'
-
-}
-close__pricing.onclick = function (event) {
-	modal__pricing.style.display = 'none'
-}
-
-close__design.onclick = function (event) {
-	modal__design.style.display = 'none'
-}
-
-close__atlantida.onclick = function (event) {
-	modal__atlantida.style.display = 'none'
-}
-
-close__smitler.onclick = function (event) {
-	modal__smitler.style.display = 'none'
-}
-
-
 
 // Убираем placeholder при focuse
 // Кстати, можно было сделать просто в html-разметке <input type="text" class="text" value="Введите текст" onfocus="this.value=''" onblur="this.value='Введите текст'">
@@ -81,19 +70,20 @@ feedback__enterName.onfocus = function () {
 	this.setAttribute('placeholder', '')
 }
 
-feedback__enterName.onblur = function () {
-	this.setAttribute('placeholder', 'Введите имя')
-}
-
 feedback__enterEmail.onfocus = function () {
 	this.setAttribute('placeholder', '')
 }
 
-feedback__enterEmail.onblur = function () {
-	this.setAttribute('placeholder', 'Введите имя')
-}
 feedback__enterText.onfocus = function () {
 	this.setAttribute('placeholder', '')
+}
+
+feedback__enterName.onblur = function () {
+	this.setAttribute('placeholder', 'Введите имя')
+}
+
+feedback__enterEmail.onblur = function () {
+	this.setAttribute('placeholder', 'Введите имя')
 }
 
 feedback__enterText.onblur = function () {
