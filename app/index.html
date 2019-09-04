@@ -142,12 +142,17 @@
 			<div class="feedback__left">
 				
 			</div>
-			<form class="feedback__form">
-				<input class="feedback__enterName" name="name" type="text" placeholder="Ваше имя">
-				<input class="feedback__enterEmail" name="email" type="email" placeholder="Ваш E-mail" required="Обязательное поле для заполнения">
-				<textarea class="feedback__enterText" name="text" placeholder="Ваши пожелания"></textarea>
+			<form class="feedback__form" action="mail.php" method="POST">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="Site Name">
+				<input type="hidden" name="admin_email" value="ninja43@mail.ru">
+				<input type="hidden" name="form_subject" value="Form Subject">
+				<!-- END Hidden Required Fields -->
+				<input class="feedback__enterName" name="Name" type="text" placeholder="Ваше имя">
+				<input class="feedback__enterEmail" name="E-mail" type="text" required placeholder="Ваш E-mail">
+				<textarea class="feedback__enterText" name="Phone" placeholder="Ваши пожелания"></textarea>
 				<div class="feedback__button-block">
-					<input class="feedback__button" type="button" value="Отправить">
+					<button type="submit" class="feedback__button">Отправить</button>
 				</div>
 			</form>
 		</div>
@@ -192,6 +197,9 @@
 	</div>
 </section>
 
+	<!-- <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="uniMail/script/script.js"></script>
 	<script src="js/scripts.min.js"></script>
 
 </body>

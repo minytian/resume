@@ -85,8 +85,8 @@ gulp.task('rsync', function() {
 	return gulp.src('app/')
 	.pipe(rsync({
 		root: 'app/',
-		hostname: 'username@yousite.com',
-		destination: 'yousite/public_html/',
+		hostname: '159.69.67.92',
+		destination: 'www/u59183.onhh.ru/',
 		// include: ['*.htaccess'], // Included files
 		exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excluded files
 		recursive: true,
