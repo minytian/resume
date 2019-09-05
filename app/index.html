@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>resume by Maxim Koryakov</title>
+	<title>resume</title>
 	<meta name="description" content="resume by Maxim Koryakov">
 
 	<meta name="viewport" content="width=device-width">
@@ -67,7 +67,7 @@
 	<!-- Проекты -->
 	<article class="container">
 		<section class="projects">
-			<h2 class="projects__descr">Мои маленькие проекты</h2>
+			<h2 class="projects__descr">Проектная деятельность</h2>
 			<div class="works">
 				<div class="works__item">
 					<h3 class="works__descr">biruang</h3>
@@ -143,14 +143,12 @@
 				
 			</div>
 			<form class="feedback__form" action="mail.php" method="POST">
-				<!-- Hidden Required Fields -->
-				<input type="hidden" name="project_name" value="Site Name">
-				<input type="hidden" name="admin_email" value="ninja43@mail.ru">
-				<input type="hidden" name="form_subject" value="Form Subject">
-				<!-- END Hidden Required Fields -->
-				<input class="feedback__enterName" name="Name" type="text" placeholder="Ваше имя">
-				<input class="feedback__enterEmail" name="E-mail" type="text" required placeholder="Ваш E-mail">
-				<textarea class="feedback__enterText" name="Phone" placeholder="Ваши пожелания"></textarea>
+				<div class="success">
+					<span>Спасибо за обращение!  Ваше письмо отправлено</span>
+				</div>
+				<input class="feedback__enterName" name="user_name" type="text" placeholder="Ваше имя">
+				<input class="feedback__enterEmail" name="user_email" type="text" required placeholder="Ваш E-mail">
+				<textarea class="feedback__enterText" name="user_text" placeholder="Ваши пожелания"></textarea>
 				<div class="feedback__button-block">
 					<button type="submit" class="feedback__button">Отправить</button>
 				</div>
@@ -197,9 +195,9 @@
 	</div>
 </section>
 
-	<!-- <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script> -->
-	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="uniMail/script/script.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="uniMail/script/script.js"></script> -->
 	<script src="js/scripts.min.js"></script>
 
 </body>
