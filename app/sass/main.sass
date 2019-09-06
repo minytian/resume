@@ -112,7 +112,7 @@ body
 		width: 35%
 		margin-right: 150px
 	&__photoFrame
-		width: 385px  //!!! поправить рамку
+		width: 385px  
 		border: 1px solid #d3d3d3
 		border-radius: 5px
 		text-align: center
@@ -122,7 +122,7 @@ body
 	&__signature
 		font-size: 24px
 		margin-bottom: 5px
-		margin-left: 30px			//!!!!
+		margin-left: 30px	
 		text-align: center
 		display: flex
 		color: #fff
@@ -191,15 +191,11 @@ body
 		justify-content: space-between
 		flex-wrap: wrap
 		&__item
-			// flex-basis: 30%
 			width: 31%
 			max-width: 400px
-			// margin-left: 20px
 			margin-bottom: 30px
 			box-sizing: border-box
 			position: relative
-			// &:nth-child(1n)
-			// 	margin: 0
 			&:hover
 				.works__link
 					transform: translateY(0)
@@ -244,7 +240,7 @@ body
 			transform: translateY(400%)
 			transition: .5s  ease
 			p 
-				margin-right: 15px
+				margin-right: 20px
 				margin-bottom: 0
 				font-size: 18px
 				display: inline-block
@@ -320,6 +316,7 @@ footer
 		.success
 			display: none
 			position: absolute
+			text-align: center
 			left: 0
 			right: 0
 			top: 0
@@ -407,7 +404,7 @@ footer
 			width: 45%
 			margin-right: 50px
 		&__photoFrame
-			width: 320px  //!!! поправить рамку
+			width: 320px  
 			padding: 10px 30px 5px 30px
 		&__avatar
 			width: 100%
@@ -441,10 +438,6 @@ footer
 			&__img
 				width: 100%
 				height: 210px
-			&__link
-				p 
-					margin-right: 10px
-					font-size: 20px
 
 
 
@@ -455,7 +448,7 @@ footer
 	.header-background
 		width: 100%
 		height: 100%
-		max-height: none  // вернуться!!!!!!!!!!!!!!!!!!!!!!!
+		max-height: none 
 		padding:
 			left: 2%
 			right: 2%
@@ -483,7 +476,7 @@ footer
 			margin-right: 0
 			align-items: center
 		&__photoFrame
-			width: 385px  //!!! поправить рамку
+			width: 385px 
 		&__avatar
 			height: 300px
 			width: 320px
@@ -530,9 +523,6 @@ footer
 				width: 230px
 				max-width: 400px
 				margin-bottom: 20px
-			&__link
-				p 
-					font-size: 20px
 
 	footer 
 		margin:
@@ -547,12 +537,6 @@ footer
 				width: 0
 			&__form
 				width: 100%
-			.success
-			// Возможно поменять!!!!!!!!!!!!
-
-
-
-
 
 
 +media-breakpoint-down(sm)
@@ -574,8 +558,15 @@ footer
 				max-width: 400px
 				margin-bottom: 20px
 			&__link
-				p 
-					font-size: 20px
+				transform: translateY(0)
+				p
+					text-decoration: underline
+			&__item
+				&:hover
+			&__img
+				&::before
+					opacity: 0.8
+
 
 +media-breakpoint-down(xs)
 	.header-background
@@ -604,7 +595,7 @@ footer
 			align-items: center
 
 		&__photoFrame
-			width: 100%  //!!! поправить рамку
+			width: 100% 
 			padding-right: 20px
 			padding-left: 20px
 		&__avatar
@@ -647,9 +638,13 @@ footer
 			p
 				margin: 0
 				padding-bottom: 10px
-	.projects__descr
-		font-size: 26px
-		line-height: 1.2
+
+	.projects
+		&__descr
+			font-size: 26px
+			line-height: 1.2
+
+
 	footer 
 		.feedback
 			padding: 20px 5% 70px 
@@ -674,7 +669,7 @@ footer
 		&__left
 			width: 100%
 		&__photoFrame
-			width: 100%  //!!! поправить рамку
+			width: 100%  
 			padding-right: 20px
 			padding-left: 20px
 		&__avatar

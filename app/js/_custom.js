@@ -83,11 +83,11 @@ feedback__enterName.onblur = function () {
 }
 
 feedback__enterEmail.onblur = function () {
-	this.setAttribute('placeholder', 'Введите имя')
+	this.setAttribute('placeholder', 'Ваш E-mail')
 }
 
 feedback__enterText.onblur = function () {
-	this.setAttribute('placeholder', 'Введите имя')
+	this.setAttribute('placeholder', 'Ваше сообщение')
 };
 
 // ajax
