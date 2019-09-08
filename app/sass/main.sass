@@ -10,6 +10,8 @@ h2
 	font-size: 33px
 h3
 	font-size: 26px
+h4
+	font-size: 24px
 
 body
 	font-size: 16px
@@ -67,7 +69,7 @@ body
 .aboutMe
 	display: flex
 	flex-direction: row
-	justify-content: space-between
+	justify-content: space-around
 	width: 100%
 	height: 100%
 	position: relative
@@ -109,16 +111,16 @@ body
 		display: flex
 		flex-direction: column
 		position: relative
-		width: 35%
-		margin-right: 150px
+		width: 25%
+		margin-right: 50px
 	&__photoFrame
-		width: 385px  
+		width: 300px  
 		border: 1px solid #d3d3d3
 		border-radius: 5px
 		text-align: center
 		z-index: 4
 		position: relative
-		padding: 10px 65px 5px 65px
+		padding: 10px 35px 5px 35px
 	&__signature
 		font-size: 24px
 		margin-bottom: 5px
@@ -154,8 +156,16 @@ body
 	&__text
 		padding-bottom: 20px
 		border-bottom: 1px solid #fff	// изменить, например, тень или вообще переопределить в хтмл отвельно и сделать длиннее
+		a 
+			color: #20b2aa
+		span 
+			border-bottom: 1px dashed
+			&:hover
+				color: #20b2aa
+				cursor: pointer
+
 	&__list
-		margin-top: 75px
+		margin-top: 65px
 		list-style: none
 		padding-left: 0
 		width: 500px
@@ -166,6 +176,9 @@ body
 	&__item
 		width: 140px
 		display: inline-block
+	p>a 
+		color: #20b2aa
+
 
 // Мои работы
 .projects
@@ -385,6 +398,8 @@ footer
 // +media-breakpoint-down(sm) - ≥576px / +media-breakpoint-up(sm) - // ≤576px
 // $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
 
+
+
 +media-breakpoint-down(lg)
 	.header-background
 		height: 100%
@@ -401,10 +416,11 @@ footer
 
 			// обо мне слева
 		&__left
-			width: 45%
+			width: 25%
 			margin-right: 50px
+			margin-bottom: 20px
 		&__photoFrame
-			width: 320px  
+			width: 300px  
 			padding: 10px 30px 5px 30px
 		&__avatar
 			width: 100%
@@ -455,8 +471,6 @@ footer
 			top: 50px
 
 	.aboutMe
-		flex-direction: column
-		justify-content: flex-start
 		width: 100%
 		height: 100%
 		position: relative
@@ -471,15 +485,16 @@ footer
 
 			// обо мне слева
 		&__left
-			width: 100%
+			// width: 25%
 			height: 500px
 			margin-right: 0
 			align-items: center
 		&__photoFrame
-			width: 385px 
+			// width: 280px
+			// height: 500px 
 		&__avatar
 			height: 300px
-			width: 320px
+			// width: 300px
 		&__signature
 			width: 300px
 		&__fullname
@@ -490,7 +505,7 @@ footer
 			display: flex
 			flex-direction: column
 			align-items: center
-			width: 100%
+			width: 50%
 			min-width: 0
 			margin-top: 30px
 		&__descr
@@ -531,15 +546,67 @@ footer
 		.feedback
 			z-index: 5
 			display: flex
-			width: 100%
+			// width: 70%
 			padding: 20px 5% 100px 
 			&__left
-				width: 0
+				width: 30%
 			&__form
 				width: 100%
 
 
 +media-breakpoint-down(sm)
+	.aboutMe
+		flex-direction: column
+		align-items: center
+		width: 100%
+		height: 100%
+		position: relative
+		z-index: 3
+		padding: 0 20px
+		.icon__github
+			width: 32px
+		.icon__repl
+			width: 32px
+		.icon__vk
+			width: 32px
+
+			// обо мне слева
+		&__left
+			// width: 25%
+			height: 500px
+			margin-right: 0
+			align-items: center
+		&__photoFrame
+			// width: 280px
+			// height: 500px 
+		&__avatar
+			height: 300px
+			// width: 300px
+		&__signature
+			width: 300px
+		&__fullname
+			font-size: 24px
+
+			// обо мне справа
+		&__right
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 50%
+			min-width: 0
+			margin-top: 30px
+		&__descr
+			text-align: center
+		&__text
+			width: 400px     
+		&__list
+			margin-top: 20px
+			width: 400px
+			margin-top: 0
+			p
+				margin: 0
+
+
 	.projects
 		padding:
 			left: 2%
@@ -595,7 +662,7 @@ footer
 			align-items: center
 
 		&__photoFrame
-			width: 100% 
+			// width: 100% 
 			padding-right: 20px
 			padding-left: 20px
 		&__avatar
@@ -669,7 +736,7 @@ footer
 		&__left
 			width: 100%
 		&__photoFrame
-			width: 100%  
+			// width: 100%  
 			padding-right: 20px
 			padding-left: 20px
 		&__avatar
