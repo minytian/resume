@@ -42,6 +42,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		// 'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
+		// 'app/libs/fotorama/fotorama.js', 	// пример
 		'app/js/_lazy.js', // JS library plug-in example
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])
@@ -102,5 +103,7 @@ gulp.task('watch', function() {
 	gulp.watch('app/*.html', gulp.parallel('code'));
 	gulp.watch('app/img/_src/**/*', gulp.parallel('img'));
 });
+
+	//   /**/*.sass следит за всеми sass
 
 gulp.task('default', gulp.parallel('img', 'styles', 'scripts', 'browser-sync', 'watch'));
