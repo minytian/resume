@@ -10,8 +10,8 @@ h2
 	font-size: 33px
 h3
 	font-size: 26px
-
-
+h4
+	font-size: 24px
 
 body
 	font-size: 16px
@@ -20,39 +20,8 @@ body
 	line-height: 1.65
 	font-family: 'Roboto', sans-serif
 	overflow-x: hidden
-	background-color: #343639
 	color: #fff
-
-// Custom Sass / Remove before use
-
-.container
-	display: flex
 	width: 100%
-	height: auto
-	position: relative
-
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-
-.example-grid
-	display: grid
-	grid-gap: $gutter
-	grid-template-columns: 1fr 1fr
-	grid-template-areas: "left right"
-	> div:first-child
-		grid-area: left
-	> div:last-child
-		grid-area: right
-	+media-breakpoint-down(xs)
-		display: block
-		> div
-			padding: $gutter/2 0
-	
-.header-background
-	width: 100%
-	height: 85vh
 	position: relative 
 	display: block 
 	background-size: cover
@@ -68,23 +37,56 @@ body
 		right: 0
 		left: 0
 		background-color: #133139		// можно сделать от верха к низу градиент
-		opacity: .45
+		opacity: .75
 		z-index: 2
+
+// Custom Sass / Remove before use
+
+.container
+	display: flex
+	width: 100%
+	height: auto
+	position: relative
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	
+.header-background
+	width: 100%
+	height: 80vh
+	max-height: 650px
+	display: block 
+	z-index: 3
+	padding:
+		left: 5%
+		right: 5%
+		top: 100px
 
 		// Поменять ширину фотографии(и __signature) при уменьшении экрана.
 		//Сделал на 1600px
 .aboutMe
 	display: flex
 	flex-direction: row
-	justify-content: space-between
+	justify-content: space-around
 	width: 100%
 	height: 100%
-	padding:
-		left: 5%
-		right: 5%
-		top: 115px
-	position: absolute
+	position: relative
 	z-index: 3
+	padding: 0 20px
+	&::before
+		content: ""
+		display: block
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		background-color: #133139		// можно сделать от верха к низу градиент
+		opacity: .8
+		z-index: 2
+		border-radius: 20px
 	&__icons
 		width: 100%
 		height: 50px
@@ -92,12 +94,15 @@ body
 		flex-direction: row
 		justify-content: center
 		align-items: center
+		position: relative
+		background-color: #fff
+		border-radius: 5px
 		.icon__github
 			width: 30px
-			margin-right: 10px
+			margin-right: 15px
 		.icon__repl
 			width: 30px
-			margin-right: 10px
+			margin-right: 15px
 		.icon__vk
 			width: 30px
 
@@ -105,27 +110,31 @@ body
 	&__left
 		display: flex
 		flex-direction: column
-		width: 35%
-		height: inherit
-		margin-right: 150px
+		position: relative
+		width: 25%
+		margin-right: 50px
 	&__photoFrame
-		width: 385px  //!!! поправить рамку
-		height: auto
-		border: 1px solid #CFCFCF
+		width: 300px  
+		border: 1px solid #d3d3d3
+		border-radius: 5px
 		text-align: center
-		z-index: 3
+		z-index: 4
+		position: relative
+		padding: 10px 35px 5px 35px
 	&__signature
-		margin-bottom: 0
-		margin-left: 30px			//!!!!
+		font-size: 24px
+		margin-bottom: 5px
+		margin-left: 30px	
 		text-align: center
 		display: flex
 		color: #fff
+		z-index: 3
 	&__avatar
-		padding-top: 20px
 		// width: 100%
 		height: auto
 		display: block
 		margin: 0 auto
+		border-radius: 5px
 	&__fullname
 		font-size: 26px
 	&__frontend
@@ -140,13 +149,23 @@ body
 	&__right
 		width: 60%
 		min-width: 40%
-		height: auto
+		// height: 500px
 		margin-top: 30px
+		position: relative
+		z-index: 3
 	&__text
 		padding-bottom: 20px
 		border-bottom: 1px solid #fff	// изменить, например, тень или вообще переопределить в хтмл отвельно и сделать длиннее
+		a 
+			color: #20b2aa
+		span 
+			border-bottom: 1px dashed
+			&:hover
+				color: #20b2aa
+				cursor: pointer
+
 	&__list
-		margin-top: 75px
+		margin-top: 65px
 		list-style: none
 		padding-left: 0
 		width: 500px
@@ -157,6 +176,9 @@ body
 	&__item
 		width: 140px
 		display: inline-block
+	p>a 
+		color: #20b2aa
+
 
 // Мои работы
 .projects
@@ -164,11 +186,12 @@ body
 	display: flex
 	flex-direction: column
 	align-items: center
+	z-index: 3
 	padding:
 		left: 5%
 		right: 5%
-		top: 30px
 		bottom: 30px
+		top: 50px
 	&__descr
 		text-align: center
 		letter-spacing: 1.3px
@@ -177,18 +200,29 @@ body
 	.works
 		width: 80%
 		display: flex
-		flex-direction: flex-start
+		flex-direction: row
 		justify-content: space-between
 		flex-wrap: wrap
 		&__item
-			// flex-basis: 30%
 			width: 31%
-			// margin-left: 20px
-			margin-bottom: 50px
+			max-width: 400px
+			margin-bottom: 30px
 			box-sizing: border-box
 			position: relative
-			// &:nth-child(1n)
-			// 	margin: 0
+			&:hover
+				.works__link
+					transform: translateY(0)
+				.works__img
+					&::before
+						content: ''
+						position: absolute
+						background-color: #133139
+						top: 0
+						bottom: 0
+						left: 0
+						right: 0
+						opacity: 0.9
+						transition: opacity 1s ease
 		&__descr
 			text-align: center
 		&__img
@@ -196,6 +230,11 @@ body
 			height: 210px
 			overflow: hidden
 			position: relative
+			img 
+				width: 100%
+				height: 100%
+				object-fit: cover
+				object-position: center
 			&::before
 				content: ''
 				position: absolute
@@ -204,20 +243,7 @@ body
 				bottom: 0
 				left: 0
 				right: 0
-				opacity: 0.5
-			&:hover
-				.works__link
-					transform: translateY(0)
-				&::before
-					content: ''
-					position: absolute
-					background-color: #133139
-					top: 0
-					bottom: 0
-					left: 0
-					right: 0
-					opacity: 0.9
-					transition: opacity 1s ease
+				opacity: 0.3
 		&__link
 			display: block
 			position: absolute
@@ -227,10 +253,11 @@ body
 			transform: translateY(400%)
 			transition: .5s  ease
 			p 
-				margin-right: 15px
+				margin-right: 20px
 				margin-bottom: 0
 				font-size: 18px
 				display: inline-block
+				font-size: 22px
 				a
 					display: block 
 					width: 80px
@@ -239,6 +266,8 @@ body
 		&__text
 			width: 100%
 			margin-top: 10px
+			a 
+				color: #20b2aa
 		&__modal
 			display: block 
 			width: 80px
@@ -252,8 +281,8 @@ body
 	display: none
 	width: 100%
 	height: 100%
-	background-color: #343639
-	z-index: 1
+	background-color: rgba(#343639, 0.85)
+	z-index: 10
 	position: fixed
 	left: 0
 	top: 0
@@ -278,23 +307,50 @@ body
 	margin-top: 30px
 
 footer 
-	background-color: #000
+	background-color: rgba(#133139, 0.85)
+	border-radius: 20px 20px 0 0 
+	margin:
+		left: 5%
+		right: 5%
 	.feedback
+		z-index: 5
 		display: flex
 		width: 100%
-		// height: 300px
-		padding-top: 20px
-		padding-bottom: 150px
-		padding:
-			left: 5%
-			right: 5%
+		padding: 20px 5% 150px 
 		&__left
 			width: 50%
 		&__form
+			z-index: 5
 			width: 50%
 			display: flex
+			position: relative
 			justify-content: space-between
 			flex-wrap: wrap
+		.success
+			display: none
+			position: absolute
+			text-align: center
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			z-index: 7
+			span 
+				margin: auto
+				color: #fff
+			& ~ *
+				transition: all 1s ease
+			&.active 
+				& ~ *
+					&::before
+						content: ''
+						position: absolute
+						background-color: #20b2aa
+						top: 0
+						bottom: 0
+						left: 0
+						right: 0
+						border-radius: 4px
 		&__enterName
 			width: 47%
 			height: 40px
@@ -330,9 +386,360 @@ footer
 			font-size: 18px
 			letter-spacing: 1px
 			transition: 0.4s
-			// background-color: #fff    /// изменить 
+			color: #133139
 			&:hover
-				background-color: darkgray // изменить 
+				background-color: #20b2aa
+				color: #fff
+			&:focus
+				background-color: #ff7f50
 			&-block
 				width: 100%
 
+// +media-breakpoint-down(sm) - ≥576px / +media-breakpoint-up(sm) - // ≤576px
+// $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+
+
+
++media-breakpoint-down(lg)
+	.header-background
+		height: 100%
+		max-height: 860px
+	.aboutMe
+		height: 90%
+		z-index: 3
+		padding: 0 20px
+		&__icons
+			.icon__github
+				margin-right: 20px
+			.icon__repl
+				margin-right: 20px
+
+			// обо мне слева
+		&__left
+			width: 25%
+			margin-right: 50px
+			margin-bottom: 20px
+		&__photoFrame
+			width: 300px  
+			padding: 10px 30px 5px 30px
+		&__avatar
+			width: 100%
+		&__fullname
+			font-size: 24px
+
+			// обо мне справа
+		&__right
+			width: 50%
+		&__descr
+			font-size: 28px
+		&__list
+			margin-top: 40px
+			width: 430px
+			p
+				margin-left: 40px
+
+		// Мои работы
+	.projects
+		padding-top: 50px
+		&__descr
+			padding-bottom: 20px
+			font-size: 30px
+		.works
+			&__item
+				width: 31%
+				max-width: 400px
+				margin-bottom: 20px
+			&__descr
+				font-size: 23px
+			&__img
+				width: 100%
+				height: 210px
+
+
+
+
+
+
++media-breakpoint-down(md)
+	.header-background
+		width: 100%
+		height: 100%
+		max-height: none 
+		padding:
+			left: 2%
+			right: 2%
+			top: 50px
+
+	.aboutMe
+		width: 100%
+		height: 100%
+		position: relative
+		z-index: 3
+		padding: 0 20px
+		.icon__github
+			width: 32px
+		.icon__repl
+			width: 32px
+		.icon__vk
+			width: 32px
+
+			// обо мне слева
+		&__left
+			// width: 25%
+			height: 500px
+			margin-right: 0
+			align-items: center
+		&__photoFrame
+			// width: 280px
+			// height: 500px 
+		&__avatar
+			height: 300px
+			// width: 300px
+		&__signature
+			width: 300px
+		&__fullname
+			font-size: 24px
+
+			// обо мне справа
+		&__right
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 50%
+			min-width: 0
+			margin-top: 30px
+		&__descr
+			text-align: center
+		&__text
+			width: 400px     
+		&__list
+			margin-top: 20px
+			width: 400px
+			margin-top: 0
+			p
+				margin: 0
+
+	// Мои работы
+	.projects
+		padding:
+			left: 2%
+			right: 2%
+			bottom: 30px
+			top: 40px
+		&__descr
+			padding-bottom: 20px
+		.works
+			width: 80%
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			flex-wrap: wrap
+			&__item
+				width: 230px
+				max-width: 400px
+				margin-bottom: 20px
+
+	footer 
+		margin:
+			left: 2%
+			right: 2%
+		.feedback
+			z-index: 5
+			display: flex
+			// width: 70%
+			padding: 20px 5% 100px 
+			&__left
+				width: 30%
+			&__form
+				width: 100%
+
+
++media-breakpoint-down(sm)
+	.aboutMe
+		flex-direction: column
+		align-items: center
+		width: 100%
+		height: 100%
+		position: relative
+		z-index: 3
+		padding: 0 20px
+		.icon__github
+			width: 32px
+		.icon__repl
+			width: 32px
+		.icon__vk
+			width: 32px
+
+			// обо мне слева
+		&__left
+			// width: 25%
+			height: 500px
+			margin-right: 0
+			align-items: center
+		&__photoFrame
+			// width: 280px
+			// height: 500px 
+		&__avatar
+			height: 300px
+			// width: 300px
+		&__signature
+			width: 300px
+		&__fullname
+			font-size: 24px
+
+			// обо мне справа
+		&__right
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 50%
+			min-width: 0
+			margin-top: 30px
+		&__descr
+			text-align: center
+		&__text
+			width: 400px     
+		&__list
+			margin-top: 20px
+			width: 400px
+			margin-top: 0
+			p
+				margin: 0
+
+
+	.projects
+		padding:
+			left: 2%
+			right: 2%
+			bottom: 30px
+			top: 40px
+		&__descr
+			padding-bottom: 20px
+		.works
+			width: 80%
+			display: flex
+			flex-direction: column
+			align-items: center
+			&__item
+				width: 100%
+				max-width: 400px
+				margin-bottom: 20px
+			&__link
+				transform: translateY(0)
+				p
+					text-decoration: underline
+			&__item
+				&:hover
+			&__img
+				&::before
+					opacity: 0.8
+
+
++media-breakpoint-down(xs)
+	.header-background
+		padding-top: 30px
+	.aboutMe
+		flex-direction: column
+		justify-content: flex-start
+		align-items: center
+		width: 100%
+		height: 100%
+		position: relative
+		z-index: 3
+		padding: 0 20px
+		.icon__github
+			width: 32px
+		.icon__repl
+			width: 32px
+		.icon__vk
+			width: 32px
+
+			// обо мне слева
+		&__left
+			width: 80%
+			height: auto
+			margin-right: 0
+			align-items: center
+
+		&__photoFrame
+			// width: 100% 
+			padding-right: 20px
+			padding-left: 20px
+		&__avatar
+			// max-height: 300px
+			max-height: 300px
+			min-height: 250px
+			width: 100%
+		&__signature
+			font-size: 22px
+		&__fullname
+			font-size: 24px
+			line-height: 1.2
+			margin-top: 5px
+		&__frontend
+			&::before
+				content: ''
+			&::after
+				content: ''
+
+			// обо мне справа
+		&__right
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 100%
+			min-width: 0
+			margin-top: 30px
+		&__descr
+			text-align: center
+			font-size: 24px
+		&__text
+			width: 100% 
+		&__info
+			width: 100%    
+		&__list
+			display: flex
+			flex-direction: column
+			width: 100%
+			margin-top: 0
+			p
+				margin: 0
+				padding-bottom: 10px
+
+	.projects
+		&__descr
+			font-size: 26px
+			line-height: 1.2
+
+
+	footer 
+		.feedback
+			padding: 20px 5% 70px 
+			&__left
+				width: 0
+			&__form
+				display: flex
+				flex-direction: column
+				width: 100%
+			&__enterName
+				width: 100%
+				padding-left: 20px
+			&__enterEmail
+				width: 100%
+				padding-left: 20px
+			&__enterText
+				width: 100%
+				height: 150px
+			&__button
+				width: 100%
+
+@media screen and (max-width: 420px)
+	.aboutMe
+		&__left
+			width: 100%
+		&__photoFrame
+			// width: 100%  
+			padding-right: 20px
+			padding-left: 20px
+		&__avatar
+			height: 270px

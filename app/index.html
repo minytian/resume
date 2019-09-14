@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>resume by Maxim Koryakov</title>
+	<title>resume</title>
 	<meta name="description" content="resume by Maxim Koryakov">
 
 	<meta name="viewport" content="width=device-width">
@@ -17,45 +17,45 @@
 
 </head>
 
-<body>
+<body style="background-image: url(img/@2x/fon__big.jpg);">
 
 	<header>
 		<div class="container">
-			<div class="header-background" style="background-image: url(img/_src/top-bg.jpg);">
+			<div class="header-background">
 
 				<div class="aboutMe">
 
 					<div class="aboutMe__left">
-						<p class="aboutMe__signature">Resume</p>
+						<p class="aboutMe__signature">Резюме</p>
 						<div class="aboutMe__photoFrame">
-							<img src="img/@1x/im.jpg" alt="Фото работника" class="aboutMe__avatar">
+							<img src="img/@2x/im.jpg" alt="Фото работника" class="aboutMe__avatar" width="200" height="209">
 							<h3 class="aboutMe__fullname">Максим Коряков</h3>
 							<p class="aboutMe__frontend">Frontend-разработчик</p>
 							<div class="aboutMe__icons">
-								<a href="https://github.com/minytian" title="github"><img src="img/_src/github__logo.svg" alt="github" class="icon__github"></a>
-								<a href="https://repl.it/@minytian" title="repl.it"><img src="img/_src/replit__logo.svg" alt="repl.it" class="icon__repl"></a>
-								<a href="https://vk.com/id9360638" title="vk"><img src="img/_src/vk__logo.svg" alt="vk" class="icon__vk"></a>
+								<a href="https://repl.it/@minytian" title="repl.it" target="_blank"><img src="img/_src/repl__svg__logo.svg" alt="repl.it" class="icon__repl"></a>
+								<a href="https://github.com/minytian" title="github" target="_blank"><img src="img/_src/github__logo.svg" alt="github" class="icon__github"></a>
+								<a href="https://vk.com/id9360638" title="vk" target="_blank"><img src="img/_src/vk__logo.svg" alt="vk" class="icon__vk"></a>
 							</div>
 						</div>
 					</div>
 
 					<div class="aboutMe__right">
-						<h1 class="aboutMe__descr">Заголовок первого уровня</h1>
-						<p class="aboutMe__text">пару слов обо мне Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Однажды большой продолжил ее деревни знаках запятой все снова. Наш лучше если домах своего, снова решила она предупреждал даже безопасную маленькая о приставка семь вопрос курсивных от всех буквоград большого, дороге за взгляд, всеми агенство! Даль предупреждал взобравшись агенство безопасную скатился.</p>
+						<h1 class="aboutMe__descr">Обо мне</h1>
+						<div class="aboutMe__text">
+							<p>Добрый день! Я начинающий frontend-разработчик. Прошёл онлайн курсы по HTML, CSS от сайта <a href="https://webformyself.com/" target="_blank" title="webformyself.com">WebForMySelf</a>, а так же онлайн курсы от школы <a href="https://webcademy.ru/jscourse/" target="_blank" title="webcademy.ru">WebCademy</a> по Javascript (<span class="works__modal" title="Сертификат о прохождении курса">сертификат</span>). Готов двигаться дальше от обучения к настоящим проектам. Выполняю свои обязанности без задержек. </p>
+							<p>Резюме можно посмотреть <a href="https://yadi.sk/i/XJWEbmFncw3aHw" title="Резюме">здесь</a></p>
+						</div>
 
 						<!-- aboutMe__info может быть не надо -->
 						<div class="aboutMe__info">
 							<ul class="aboutMe__list">
 								<li class="aboutMe__item">Дата рождения:</li><p>27 августа 1992 года</p>
-								<li class="aboutMe__item">Адрес:</li><p>Киров, Ленинский р-он, ЖК "Знак"</p>
-								<li class="aboutMe__item">Телефон:</li><p>+7(953)-943-64-05</p>
-								<li class="aboutMe__item">E-mail:</li><p>maxim.koryakov@mail.ru</p>
-								<li class="aboutMe__item">что нибудь ещё:</li>
+								<li class="aboutMe__item">Адрес:</li><p>Киров, Ленинский р-н, ЖК "Знак"</p>
+								<li class="aboutMe__item">Телефон:</li><p><a href="tel:+7-953-943-64-05">+7(953)-943-64-05</a></p>
+								<li class="aboutMe__item">E-mail:</li><p><a href="mailto:maxim.koryakov@mail.ru">maxim.koryakov@mail.ru</a></p>
 							</ul>
 						</div>
-
 					</div><!-- обо мне справа -->
-
 				</div> <!-- Обо мне -->
 
 			</div>
@@ -67,7 +67,7 @@
 	<!-- Проекты -->
 	<article class="container">
 		<section class="projects">
-			<h2 class="projects__descr">Мои маленькие проекты</h2>
+			<h2 class="projects__descr">Практика</h2>
 			<div class="works">
 				<div class="works__item">
 					<h3 class="works__descr">biruang</h3>
@@ -136,19 +136,24 @@
 
 
 <footer>
-	<!-- а тут в оставшемся месте, что оставил 80vh сделаем в строчку форму отправки письма на эл. адрес. -->
-	<div class="feedback">
-		<div class="feedback__left">
-			
-		</div>
-		<form class="feedback__form">
-			<input class="feedback__enterName" type="text" placeholder="Ваше имя">
-			<input class="feedback__enterEmail" type="email" placeholder="Ваш E-mail" required="Обязательное поле для заполнения">
-			<textarea class="feedback__enterText" placeholder="Ваши пожелания"></textarea>
-			<div class="feedback__button-block">
-				<input class="feedback__button" type="button" value="Отправить">
+	<div class="container">
+		<!-- а тут в оставшемся месте, что оставил 80vh сделаем в строчку форму отправки письма на эл. адрес. -->
+		<div class="feedback">
+			<div class="feedback__left">
+				
 			</div>
-		</form>
+			<form class="feedback__form" action="mail.php" method="POST">
+				<div class="success">
+					<span>Спасибо за обращение!  Ваше письмо отправлено</span>
+				</div>
+				<input class="feedback__enterName" name="user_name" type="text" placeholder="Ваше имя">
+				<input class="feedback__enterEmail" name="user_email" type="text" required placeholder="Ваш E-mail">
+				<textarea class="feedback__enterText" name="user_text" placeholder="Ваше сообщение"></textarea>
+				<div class="feedback__button-block">
+					<button type="submit" class="feedback__button">Отправить</button>
+				</div>
+			</form>
+		</div>
 	</div>
 </footer>
 
@@ -157,39 +162,52 @@
 	<div class="myModal" id="modal__biruang">
 		<p class="close">&times;</p>
 		<div class="modal" >
-			<img src="img/@2x/Biruang__big.jpg" alt="Biruang__big">
+			<img alt="Biruang__big" class='lazy' data-src='img/@2x/Biruang__big.jpg' data-srcset="img/@2x/Biruang__big.jpg">
 		</div>
 	</div>
 
 	<div class="myModal" id="modal__pricing">
 		<p class="close">&times;</p>
 		<div class="modal" >
-			<img src="img/@2x/Pricing__big.jpg" alt="Pricing__big">
+			<img alt="Pricing__big" class='lazy' data-src="img/@2x/Pricing__big.jpg" data-srcset="img/@2x/Pricing__big.jpg">
 		</div>
 	</div>
 
 	<div class="myModal" id="modal__design">
 		<p class="close">&times;</p>
 		<div class="modal" >
-			<img src="img/@2x/design__big.png" alt="design__big">
+			<img alt="design__big" class='lazy' data-src="img/@2x/design__big.png" data-srcset="img/@2x/design__big.png">
 		</div>
 	</div>
 
 	<div class="myModal" id="modal__atlantida">
 		<p class="close">&times;</p>
 		<div class="modal" >
-			<img src="img/@2x/atlantida__big.jpg" alt="atlantida__big">
+			<img alt="atlantida__big" class='lazy' data-src="img/@2x/atlantida__big.jpg" data-srcset="img/@2x/atlantida__big.jpg">
 		</div>
 	</div>
 
 	<div class="myModal" id="modal__smitler">
 		<p class="close">&times;</p>
 		<div class="modal" >
-			<img src="img/@2x/smitler__big.jpg" alt="smitler__big">
+			<img alt="smitler__big" class='lazy' data-src="img/@2x/smitler__big.jpg" data-srcset="img/@2x/smitler__big.jpg">
+		</div>
+	</div>
+	<div class="myModal" id="certificate">
+		<p class="close">&times;</p>
+		<div class="modal" >
+			<img alt="certificate js" class='lazy' data-src="img/@2x/certificate__js.png" data-srcset="img/@2x/certificate__js.png">
+		</div>
+	</div>
+	<div class="myModal" id="rezume">
+		<p class="close">&times;</p>
+		<div class="modal" >
+			<img alt="rezume" src="img/_src/rezume.pdf">
 		</div>
 	</div>
 </section>
 
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
 	<script src="js/scripts.min.js"></script>
 
 </body>
